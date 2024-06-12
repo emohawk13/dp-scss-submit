@@ -1,0 +1,66 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.intro {
+  @include flexbox(column, flex-end, flex-end, nowrap);
+  position: relative;
+  padding-top: 2%;
+  width: 100%;
+  color: $text-secondary;
+  height: 18%;
+  background: linear-gradient(to right, $shadow, $strike);
+  p {
+    padding-right: 1%;
+  }
+}
+
+.at-container {
+  @include flexbox(row, space-evenly);
+  border: $strike, solid, 4px;
+
+  i {
+    font-size: 4em;
+    transition: transform 0.5s ease;
+  }
+
+  h2 {
+    padding: 2%;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.at-grid {
+  @include grid(3, 1fr, 10%);
+  padding: 2%;
+
+  .at {
+    img {
+      max-width: 90%;
+      height: 200px;
+      display: block;
+      margin-bottom: 2%;
+    }
+    h4 {
+      margin-top: 5px;
+      text-align: left;
+      font-size: 1em;
+    }
+  }
+}
+
+.image-carrousel {
+  @include grid(15, 1fr, 20px);
+  overflow: hidden;
+  height: 40vh;
+  .image-gallery {
+    display: inline-block;
+    text-align: center;
+    img {
+      height: 250px;
+      width: 250px;
+    }
+  }
+}

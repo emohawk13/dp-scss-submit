@@ -1,0 +1,54 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.nav-menu {
+  @include flexbox(row, space-evenly);
+  background-color: $secondary-color;
+  padding: 0.75%;
+  width: 20%;
+
+  .nav-item a {
+    text-decoration: none;
+    color: $text-secondary;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 2%;
+  z-index: 1;
+  color: $text-secondary;
+  background-color: $primary-color;
+  h2 {
+    text-align: center;
+  }
+  p {
+    @include flexbox();
+  }
+}
+
+.contact {
+  text-align: right;
+  h4:not(:first-child) {
+    font-size: 0.75em;
+  }
+}
+
+.footer {
+  height: 25%;
+}
